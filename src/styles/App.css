@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    --1-color: #021C1E;
+    --2-color: #004445;
+    --3-color: #2C7873;
+    --4-color: #6FB98F;
+}
+
+
+/*Header*/
+.header {
+    background-color: var(--4-color);
+}
+
+.head {
+    margin: 20px 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+}
+
+.head-line {
+    height: 3px;
+    border: 0;
+    background: var(--1-color);
+}
+
+.head h1 {
+    color: var(--1-color);
+    cursor: pointer;
+}
+
+.head h1:hover,
+.header-btn:hover {
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+
+
+.header-btn {
+    cursor: pointer;
+    background-color: var(--4-color);
+    border: 3px solid var(--1-color);
+    color: var(--1-color);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin-left: 20px;
+    padding: 10px 20px;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input-add-task {
+    height: 40px;
+    width: 450px;
+    font-size: 24px;
+    margin-right: 50px;
+    border: 5px solid var(--2-color);
+    background-color: transparent;
+}
+
+.input-add-task::placeholder {
+    color: black;
+}
+
+.btn-add-task {
+    background: transparent;
+    width: 100px;
+    height: 45px;
+    border: 5px solid var(--2-color);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.btn-add-task:hover {
+    color: rgb(31, 167, 31);
+    border: 5px solid rgb(31, 167, 31);
+    font-size: 24px;
+    transition: 0.4s;
+}
+
+
+
+/*Post List*/
+.post-list {
+    background-color: var(--3-color);
+    height: 93vh;
+    width: 80%;
+    padding: 20px 130px;
+}
+
+.post-list-h2 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--1-color);
+}
+
+
+
+/*Task*/
+.app {
+    display: flex;
+    justify-items: center;
+}
+
+.box-of-task {
+    background-color: var(--3-color);
+    height: 93vh;
+    width: 80%;
+    text-align: center;
+}
+
+
+.noTask-h1 {
+    font-size: 36px;
+}
+
+
+
+/*TodoBox-css*/
+.box-task {
+    border: 5px solid var(--1-color);
+    margin-top: 20px;
+    padding: 10px 7px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-task-done {
+    background-color: var(--3-color);
+    border: 3px solid var(--1-color);
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-task-done:hover {
+    background-color: var(--2-color);
+    border: 3px solid var(--3-color);
+    transition: 0.5s;
+}
+
+
+
+/*Modal.jsx*/
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    background: rgb(0, 0, 0, 0.7);
+}
+
+.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-content {
+    padding: 20px;
+    background: var(--4-color);
+    min-width: 250px;
+    height: 150px;
+    display: flex;
+    align-items: center
+}
+
+
+
+/*User Info*/
+.user-info {
+    width: 20%;
+    padding: 20px 30px;
+}
+
+.user-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+}
