@@ -17,11 +17,11 @@ function Task() {
         }
     ]);
 
-    const [visible, setVisible] = useState(false);
+    const [visibleCreateTask, setVisibleCreateTask] = useState(false);
 
     const createNewPost = (newPost) => {
         setPosts([...posts, newPost])
-        setVisible(false)
+        setVisibleCreateTask(false)
     }
 
     const removePost = (post) => {
@@ -31,26 +31,25 @@ function Task() {
     const reloadPage = () => {
         window.location.reload();
     }
-
-    const class_box = ['box-of-task'];
-    class_box.push('center');
     return (
         <div>
-            <Header reload={reloadPage} setVisible={setVisible} />
-            <Modal visible={visible} setVisible={setVisible}>
+            <Header reload={reloadPage} />
+            <Modal visible={visibleCreateTask} setVisible={setVisibleCreateTask}>
                 <PostForm create={createNewPost} />
             </Modal>
+            {/* <button onClick={() => setVisibleCreateTask(true)}>Create</button> */}
             <div className='app'>
-                <UserInfo />
+                <UserInfo visible={visibleCreateTask} setVisible={setVisibleCreateTask} />
                 {posts.length
                     ?
                     <PostList remove={removePost} posts={posts} />
                     :
-                    <h1 className='noTask-h1'>No task, add something to do</h1>
+                    <div className='noTask-h1'><h1>No task, add something to do</h1></div>
                 }
             </div>
         </div >
     );
 }
+
 
 export default Task;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 function PostForm({ create }) {
-
     const [post, setPost] = useState({ title: '', body: '' });
 
     const addNewPost = (e) => {
@@ -46,7 +45,7 @@ function PostForm({ create }) {
 
                 <button className='btn-add-task' onClick={addNewPost}>Submit</button>
             </div>
-        </div>
+        </div >
     );
 }
 

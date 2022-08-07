@@ -1,20 +1,10 @@
-import React, { useState } from 'react';
-import Header from '../components/Header';
-import UserInfo from '../components/UserInfo';
+import React from 'react';
 
 function Error() {
-    const [visible, setVisible] = useState(false);
-
-    const reloadPage = () => {
-        window.location.reload();
-    }
-
     return (
         <div>
-            <Header reload={reloadPage} visible={visible} setVisible={setVisible} />
             <div className='app'>
-                <UserInfo />
-
+                This page doesn`t exist. <a href="/">Home</a>
             </div>
         </div>
     );
