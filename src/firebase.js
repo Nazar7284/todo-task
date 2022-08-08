@@ -12,40 +12,40 @@ const app = initializeApp({
     measurementId: "G-H8S1EE660T"
 });
 
-const auth = getAuth(app);
-const db = getDatabase(app);
+// const auth = getAuth(app);
+// const db = getDatabase(app);
 
-const GoogleProvider = new GoogleAuthProvider();
+// const GoogleProvider = new GoogleAuthProvider();
 
-let email, imageUrl, name, userId = '';
+// let email, imageUrl, name, userId = '';
 
 
-function signupWithGoogle() {
-    signInWithPopup(auth, GoogleProvider)
-        .then((result) => {
-            console.log(result)
-            email = result.user.email;
-            imageUrl = result.user.photoURL;
-            name = result.user.displayName;
-            userId = result.user.uid;
-        }).catch((error) => {
-            console.log(error.message)
-        });
-    set(ref(db, 'Users/' + userId), {
-        username: name,
-        email: email,
-        profile_picture: imageUrl
-    });
-}
-
-// let taskId = Date.now();
-
-// function addTask(title, body) {
-//     console.log('1')
-//     set(ref(db, 'Task/' + userId + taskId), {
-//         title: title,
-//         body: body
+// function signupWithGoogle() {
+//     signInWithPopup(auth, GoogleProvider)
+//         .then((result) => {
+//             console.log(result)
+//             email = result.user.email;
+//             imageUrl = result.user.photoURL;
+//             name = result.user.displayName;
+//             userId = result.user.uid;
+//         }).catch((error) => {
+//             console.log(error.message)
+//         });
+//     set(ref(db, 'Users/' + userId), {
+//         username: name,
+//         email: email,
+//         profile_picture: imageUrl
 //     });
 // }
 
-export { signupWithGoogle }
+// // let taskId = Date.now();
+
+// // function addTask(title, body) {
+// //     console.log('1')
+// //     set(ref(db, 'Task/' + userId + taskId), {
+// //         title: title,
+// //         body: body
+// //     });
+// // }
+
+// export { signupWithGoogle }

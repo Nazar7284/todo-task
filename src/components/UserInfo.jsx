@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function UserInfo({ visible, setVisible }) {
     const user = { name: 'Nazar', email: 'nazar7284n@gmail.com', imageUrl: 'https://lh3.googleusercontent.com/a-/AFdZucrO4xl-bfb4ebBX6UZ41G7ysuYRJYT_kIQt_0LHIg=s96-c' }
 
-    console.log(user.name);
     return (
-
         < div className='user-info' >
             <div className='user'>
                 <div className='user-icon'><img src={user.imageUrl} alt="" /></div>

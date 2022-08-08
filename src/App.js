@@ -5,18 +5,18 @@ import About from './pages/About';
 import Login from './pages/Login';
 import Error from './pages/Error';
 import './styles/App.css'
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+
 
 function App() {
-  const [isUserSignedIN, setIsUserSignIn] = useState(false);
+  const [isUserSignedIN, setIsUserSignIn] = useState(true);
 
-  const auth = getAuth();
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      return setIsUserSignIn(true)
-    }
-    setIsUserSignIn(false)
-  });
+  // const auth = getAuth();
+  // onAuthStateChanged(auth, (user) => {
+  //   if (user) {
+  //     return setIsUserSignIn(true)
+  //   }
+  //   setIsUserSignIn(true)
+  // });
 
 
   if (isUserSignedIN === true) {

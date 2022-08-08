@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { getAuth, signOut } from "firebase/auth";
+// import { getAuth, signOut } from "firebase/auth";
 
 const Header = ({ reload }) => {
-    const auth = getAuth();
-    function SignOut() {
-        signOut(auth).then(() => {
-            console.log('user is sign out')
-        }).catch((error) => {
-            console.log('error is: ' + error)
-        });
-    }
+    // const auth = getAuth();
+    // function SignOut() {
+    //     signOut(auth).then(() => {
+    //         console.log('user is sign out')
+    //     }).catch((error) => {
+    //         console.log('error is: ' + error)
+    //     });
+    // }
 
     return (
         <div className='header'>
@@ -21,7 +21,7 @@ const Header = ({ reload }) => {
                     <Link to='/about' className='header-btn'><strong>About</strong></Link>
                 </div>
                 <div>
-                    <button className='header-btn' onClick={SignOut}>
+                    <button className='header-btn'>
                         <strong>Sign Out</strong>
                     </button>
                 </div>
